@@ -5,8 +5,9 @@
 
 
 - 🏫 I attend the **Illinois Math and Science Academy**
+- 🏢 I'm interning at **Saint Louis University**
 - 🔭 I’m currently interested in **Natural Language Processing**
-- 🌱 I'm learning about the effinceny of **Large Language Models**
+- 🌱 I'm learning about the efficiency of **Large Language Models**
 - 📫 How to reach me **laksh2008patel@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
