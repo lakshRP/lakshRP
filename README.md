@@ -1,13 +1,7 @@
 
 
 <h1 align="center">Hi 👋, I'm Laksh</h1>
-<h3 align="center">A track athlete who loves to code.</h3>
 
-
-- 🏫 I attend the **Illinois Math and Science Academy**
-- 🔭 I’m currently interested in **Natural Language Processing**
-- 🌱 I'm learning about the efficiency of **Large Language Models**
-- 📫 How to reach me **laksh2008patel@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
