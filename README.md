@@ -1,5 +1,10 @@
 <p>Hi, I'm <strong>Laksh.</strong></p>
-<p>I do mathematics R&D at a specialized math-intelligence lab.</p>
+<p>About me:</p>
+
+    Incoming CS @ Caltech
+    Prev. MLE @ Berkeley AI Research Labs (Dharmamitra)
+    Prev. QD @ Rebellion Research
+    
 
 <p>For further inquiries: lpatel [at] imsa [dot] edu</p>
 <p>
