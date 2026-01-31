@@ -1,7 +1,6 @@
 <p>Hi, I'm <strong>Laksh.</strong></p>
 <p>About me:</p>
 
-    Incoming CS @ Caltech
     Prev. MLE @ Berkeley AI Research Labs (Dharmamitra)
     Prev. QD @ Rebellion Research
     
