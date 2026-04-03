@@ -4,7 +4,7 @@
 I’m interested in machine learning, research, and engineering, with experience spanning applied ML, quantitative modeling, and scientific computing.
 </p>
 
-<p>I’ve previously worked with Hillclimb, Berkeley AI Research Labs (Dharmamitra), and Rebellion Research.</p>
+<p>I’ve previously worked with Hillclimb (YC F25), Berkeley AI Research Labs (Dharmamitra), and Rebellion Research.</p>
 
 <p>For further inquiries: lpatel [at] imsa [dot] edu</p>
 
