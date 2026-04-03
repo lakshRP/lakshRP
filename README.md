@@ -1,11 +1,13 @@
 <p>Hi, I'm <strong>Laksh.</strong></p>
-<p>About me:</p>
 
-    Prev. MLE @ Berkeley AI Research Labs (Dharmamitra)
-    Prev. QD @ Rebellion Research
-    
+<p>
+I’m interested in machine learning, research, and engineering, with experience spanning applied ML, quantitative modeling, and scientific computing.
+</p>
+
+<p>I’ve previously worked with Hillclimb, Berkeley AI Research Labs (Dharmamitra), and Rebellion Research.</p>
 
 <p>For further inquiries: lpatel [at] imsa [dot] edu</p>
+
 <p>
   <a href="https://lakshrp.github.io" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Website-000000?style=flat&logo=vercel&logoColor=white" />
@@ -17,6 +19,7 @@
     <img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" />
   </a>
 </p>
+
 <h3>Tech Stack</h3>
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
