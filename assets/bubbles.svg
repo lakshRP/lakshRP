@@ -1,0 +1,82 @@
+<svg width="1600" height="320" viewBox="0 0 1600 320" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .bubble {
+      animation: float linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+      shape-rendering: crispEdges;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(350px) translateX(0px);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-420px) translateX(var(--drift));
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <!-- Bubble 1 -->
+  <g class="bubble" style="--drift: 120px; animation-duration: 15s; animation-delay: -2s;">
+    <rect x="112" y="280" width="8" height="8" fill="rgba(224,231,255,0.45)"/>
+    <rect x="120" y="280" width="8" height="8" fill="rgba(165,180,252,0.35)"/>
+    <rect x="104" y="288" width="8" height="8" fill="rgba(165,180,252,0.35)"/>
+    <rect x="112" y="288" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
+    <rect x="120" y="288" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
+    <rect x="128" y="288" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
+    <rect x="104" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
+    <rect x="112" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
+    <rect x="120" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
+    <rect x="128" y="296" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
+    <rect x="112" y="304" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
+    <rect x="120" y="304" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
+  </g>
+
+  <!-- Bubble 2 -->
+  <g class="bubble" style="--drift: -90px; animation-duration: 20s; animation-delay: -7s;">
+    <rect x="332" y="290" width="10" height="10" fill="rgba(224,231,255,0.42)"/>
+    <rect x="342" y="290" width="10" height="10" fill="rgba(165,180,252,0.32)"/>
+    <rect x="322" y="300" width="10" height="10" fill="rgba(165,180,252,0.32)"/>
+    <rect x="332" y="300" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
+    <rect x="342" y="300" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
+    <rect x="352" y="300" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
+    <rect x="322" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
+    <rect x="332" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
+    <rect x="342" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
+    <rect x="352" y="310" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
+    <rect x="332" y="320" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
+    <rect x="342" y="320" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
+  </g>
+
+  <!-- Bubble 3 -->
+  <g class="bubble" style="--drift: 180px; animation-duration: 13s; animation-delay: -4s;">
+    <rect x="612" y="300" width="12" height="12" fill="rgba(224,231,255,0.42)"/>
+    <rect x="624" y="300" width="12" height="12" fill="rgba(165,180,252,0.32)"/>
+    <rect x="600" y="312" width="12" height="12" fill="rgba(165,180,252,0.32)"/>
+    <rect x="612" y="312" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
+    <rect x="624" y="312" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
+    <rect x="636" y="312" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
+    <rect x="600" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
+    <rect x="612" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
+    <rect x="624" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
+    <rect x="636" y="324" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
+    <rect x="612" y="336" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
+    <rect x="624" y="336" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
+  </g>
+
+</svg>
