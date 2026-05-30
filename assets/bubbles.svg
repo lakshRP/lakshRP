@@ -1,82 +1,306 @@
 <svg width="1600" height="320" viewBox="0 0 1600 320" xmlns="http://www.w3.org/2000/svg">
-
   <style>
-    .bubble {
-      animation: float linear infinite;
+    svg {
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .sway {
+      shape-rendering: crispEdges;
+      animation: sway ease-in-out infinite;
       transform-box: fill-box;
       transform-origin: center;
+    }
+
+    .rise {
       shape-rendering: crispEdges;
+      animation: rise linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
     }
 
-    @keyframes float {
+    @keyframes rise {
       0% {
-        transform: translateY(350px) translateX(0px);
+        transform: translateY(360px);
         opacity: 0;
       }
-
       10% {
-        opacity: 1;
+        opacity: 0.58;
       }
-
-      90% {
-        opacity: 1;
+      42% {
+        transform: translateY(200px);
+        opacity: 0.74;
       }
-
+      78% {
+        transform: translateY(30px);
+        opacity: 0.62;
+      }
       100% {
-        transform: translateY(-420px) translateX(var(--drift));
+        transform: translateY(-170px);
         opacity: 0;
       }
     }
+
+    @keyframes sway {
+      0%   { transform: translateX(0px); }
+      20%  { transform: translateX(calc(var(--sway-amt) * 0.40)); }
+      40%  { transform: translateX(calc(var(--sway-amt) * -0.18)); }
+      60%  { transform: translateX(calc(var(--sway-amt) * 0.30)); }
+      80%  { transform: translateX(calc(var(--sway-amt) * -0.45)); }
+      100% { transform: translateX(0px); }
+    }
+
+    .o { fill: rgba(72, 220, 255, 0.58); }
+    .m { fill: rgba(135, 245, 255, 0.48); }
+    .i { fill: rgba(220, 255, 255, 0.34); }
+    .h { fill: rgba(255, 255, 255, 0.70); }
+    .s { fill: rgba(24, 155, 220, 0.42); }
   </style>
 
-  <rect width="100%" height="100%" fill="transparent"/>
+  <rect width="1600" height="320" fill="rgba(20,110,175,0.08)"/>
 
-  <!-- Bubble 1 -->
-  <g class="bubble" style="--drift: 120px; animation-duration: 15s; animation-delay: -2s;">
-    <rect x="112" y="280" width="8" height="8" fill="rgba(224,231,255,0.45)"/>
-    <rect x="120" y="280" width="8" height="8" fill="rgba(165,180,252,0.35)"/>
-    <rect x="104" y="288" width="8" height="8" fill="rgba(165,180,252,0.35)"/>
-    <rect x="112" y="288" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
-    <rect x="120" y="288" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
-    <rect x="128" y="288" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
-    <rect x="104" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
-    <rect x="112" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
-    <rect x="120" y="296" width="8" height="8" fill="rgba(99,102,241,0.25)"/>
-    <rect x="128" y="296" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
-    <rect x="112" y="304" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
-    <rect x="120" y="304" width="8" height="8" fill="rgba(59,130,246,0.18)"/>
+  <defs>
+    <!-- SMALL: 32 x 32 -->
+    <g id="bubble-sm">
+      <rect class="o" x="8" y="0" width="16" height="4"/>
+      <rect class="o" x="4" y="4" width="24" height="4"/>
+      <rect class="o" x="0" y="8" width="32" height="16"/>
+      <rect class="o" x="4" y="24" width="24" height="4"/>
+      <rect class="o" x="8" y="28" width="16" height="4"/>
+
+      <rect class="m" x="8" y="4" width="16" height="4"/>
+      <rect class="m" x="4" y="8" width="24" height="16"/>
+      <rect class="m" x="8" y="24" width="16" height="4"/>
+
+      <rect class="i" x="8" y="8" width="16" height="16"/>
+
+      <rect class="h" x="8" y="8" width="4" height="4"/>
+      <rect class="h" x="8" y="12" width="4" height="4" opacity="0.85"/>
+      <rect class="h" x="12" y="12" width="4" height="4" opacity="0.55"/>
+
+      <rect class="s" x="24" y="16" width="4" height="4"/>
+      <rect class="s" x="20" y="20" width="8" height="4"/>
+    </g>
+
+    <!-- MEDIUM: 40 x 40 -->
+    <g id="bubble-md">
+      <rect class="o" x="12" y="0" width="16" height="4"/>
+      <rect class="o" x="4" y="4" width="32" height="4"/>
+      <rect class="o" x="0" y="8" width="40" height="24"/>
+      <rect class="o" x="4" y="32" width="32" height="4"/>
+      <rect class="o" x="12" y="36" width="16" height="4"/>
+
+      <rect class="m" x="12" y="4" width="16" height="4"/>
+      <rect class="m" x="4" y="8" width="32" height="24"/>
+      <rect class="m" x="12" y="32" width="16" height="4"/>
+
+      <rect class="i" x="12" y="8" width="16" height="4"/>
+      <rect class="i" x="8" y="12" width="24" height="16"/>
+      <rect class="i" x="12" y="28" width="16" height="4"/>
+
+      <rect class="h" x="12" y="8" width="4" height="4"/>
+      <rect class="h" x="12" y="12" width="4" height="4" opacity="0.9"/>
+      <rect class="h" x="16" y="12" width="4" height="4" opacity="0.6"/>
+
+      <rect class="s" x="28" y="20" width="4" height="4"/>
+      <rect class="s" x="24" y="24" width="8" height="4"/>
+      <rect class="s" x="20" y="28" width="8" height="4"/>
+    </g>
+
+    <!-- LARGE: 48 x 48 -->
+    <g id="bubble-lg">
+      <rect class="o" x="16" y="0" width="16" height="4"/>
+      <rect class="o" x="8" y="4" width="32" height="4"/>
+      <rect class="o" x="4" y="8" width="40" height="4"/>
+      <rect class="o" x="0" y="12" width="48" height="24"/>
+      <rect class="o" x="4" y="36" width="40" height="4"/>
+      <rect class="o" x="8" y="40" width="32" height="4"/>
+      <rect class="o" x="16" y="44" width="16" height="4"/>
+
+      <rect class="m" x="16" y="4" width="16" height="4"/>
+      <rect class="m" x="8" y="8" width="32" height="4"/>
+      <rect class="m" x="4" y="12" width="40" height="24"/>
+      <rect class="m" x="8" y="36" width="32" height="4"/>
+      <rect class="m" x="16" y="40" width="16" height="4"/>
+
+      <rect class="i" x="16" y="8" width="16" height="4"/>
+      <rect class="i" x="12" y="12" width="24" height="4"/>
+      <rect class="i" x="8" y="16" width="32" height="16"/>
+      <rect class="i" x="12" y="32" width="24" height="4"/>
+
+      <rect class="h" x="16" y="8" width="4" height="4"/>
+      <rect class="h" x="16" y="12" width="4" height="4" opacity="0.9"/>
+      <rect class="h" x="20" y="12" width="4" height="4" opacity="0.65"/>
+      <rect class="h" x="16" y="16" width="4" height="4" opacity="0.45"/>
+
+      <rect class="s" x="36" y="24" width="4" height="4"/>
+      <rect class="s" x="32" y="28" width="8" height="4"/>
+      <rect class="s" x="28" y="32" width="8" height="4"/>
+      <rect class="s" x="24" y="36" width="8" height="4"/>
+    </g>
+
+    <!-- EXTRA LARGE: 56 x 56 -->
+    <g id="bubble-xl">
+      <rect class="o" x="16" y="0" width="24" height="4"/>
+      <rect class="o" x="8" y="4" width="40" height="4"/>
+      <rect class="o" x="4" y="8" width="48" height="4"/>
+      <rect class="o" x="0" y="12" width="56" height="32"/>
+      <rect class="o" x="4" y="44" width="48" height="4"/>
+      <rect class="o" x="8" y="48" width="40" height="4"/>
+      <rect class="o" x="16" y="52" width="24" height="4"/>
+
+      <rect class="m" x="16" y="4" width="24" height="4"/>
+      <rect class="m" x="8" y="8" width="40" height="4"/>
+      <rect class="m" x="4" y="12" width="48" height="32"/>
+      <rect class="m" x="8" y="44" width="40" height="4"/>
+      <rect class="m" x="16" y="48" width="24" height="4"/>
+
+      <rect class="i" x="20" y="8" width="16" height="4"/>
+      <rect class="i" x="16" y="12" width="24" height="4"/>
+      <rect class="i" x="12" y="16" width="32" height="4"/>
+      <rect class="i" x="8" y="20" width="40" height="20"/>
+      <rect class="i" x="12" y="40" width="32" height="4"/>
+
+      <rect class="h" x="20" y="8" width="4" height="4"/>
+      <rect class="h" x="20" y="12" width="4" height="4" opacity="0.95"/>
+      <rect class="h" x="24" y="12" width="4" height="4" opacity="0.7"/>
+      <rect class="h" x="20" y="16" width="4" height="4" opacity="0.5"/>
+      <rect class="h" x="24" y="16" width="4" height="4" opacity="0.35"/>
+
+      <rect class="s" x="40" y="28" width="4" height="4"/>
+      <rect class="s" x="36" y="32" width="8" height="4"/>
+      <rect class="s" x="32" y="36" width="8" height="4"/>
+      <rect class="s" x="28" y="40" width="12" height="4"/>
+      <rect class="s" x="28" y="44" width="8" height="4"/>
+    </g>
+
+    <!-- XXL: 64 x 64 -->
+    <g id="bubble-xxl">
+      <rect class="o" x="20" y="0" width="24" height="4"/>
+      <rect class="o" x="12" y="4" width="40" height="4"/>
+      <rect class="o" x="8" y="8" width="48" height="4"/>
+      <rect class="o" x="4" y="12" width="56" height="4"/>
+      <rect class="o" x="0" y="16" width="64" height="32"/>
+      <rect class="o" x="4" y="48" width="56" height="4"/>
+      <rect class="o" x="8" y="52" width="48" height="4"/>
+      <rect class="o" x="12" y="56" width="40" height="4"/>
+      <rect class="o" x="20" y="60" width="24" height="4"/>
+
+      <rect class="m" x="20" y="4" width="24" height="4"/>
+      <rect class="m" x="12" y="8" width="40" height="4"/>
+      <rect class="m" x="8" y="12" width="48" height="4"/>
+      <rect class="m" x="4" y="16" width="56" height="32"/>
+      <rect class="m" x="8" y="48" width="48" height="4"/>
+      <rect class="m" x="12" y="52" width="40" height="4"/>
+      <rect class="m" x="20" y="56" width="24" height="4"/>
+
+      <rect class="i" x="24" y="8" width="16" height="4"/>
+      <rect class="i" x="20" y="12" width="24" height="4"/>
+      <rect class="i" x="12" y="16" width="40" height="4"/>
+      <rect class="i" x="8" y="20" width="48" height="24"/>
+      <rect class="i" x="12" y="44" width="40" height="4"/>
+      <rect class="i" x="20" y="48" width="24" height="4"/>
+
+      <rect class="h" x="24" y="8" width="4" height="4"/>
+      <rect class="h" x="24" y="12" width="4" height="4" opacity="0.95"/>
+      <rect class="h" x="28" y="12" width="4" height="4" opacity="0.72"/>
+      <rect class="h" x="24" y="16" width="4" height="4" opacity="0.52"/>
+      <rect class="h" x="28" y="16" width="4" height="4" opacity="0.34"/>
+
+      <rect class="s" x="44" y="32" width="4" height="4"/>
+      <rect class="s" x="40" y="36" width="8" height="4"/>
+      <rect class="s" x="36" y="40" width="12" height="4"/>
+      <rect class="s" x="32" y="44" width="12" height="4"/>
+      <rect class="s" x="32" y="48" width="8" height="4"/>
+    </g>
+  </defs>
+
+  <!-- sparse layout with occasional very large bubbles -->
+  <g transform="translate(26 0)">
+    <g class="sway" style="--sway-amt:6px; animation-duration:4.8s; animation-delay:-0.8s;">
+      <g class="rise" style="animation-duration:13.6s; animation-delay:-0.0s;">
+        <use href="#bubble-sm"/>
+      </g>
+    </g>
   </g>
 
-  <!-- Bubble 2 -->
-  <g class="bubble" style="--drift: -90px; animation-duration: 20s; animation-delay: -7s;">
-    <rect x="332" y="290" width="10" height="10" fill="rgba(224,231,255,0.42)"/>
-    <rect x="342" y="290" width="10" height="10" fill="rgba(165,180,252,0.32)"/>
-    <rect x="322" y="300" width="10" height="10" fill="rgba(165,180,252,0.32)"/>
-    <rect x="332" y="300" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
-    <rect x="342" y="300" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
-    <rect x="352" y="300" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
-    <rect x="322" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
-    <rect x="332" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
-    <rect x="342" y="310" width="10" height="10" fill="rgba(99,102,241,0.22)"/>
-    <rect x="352" y="310" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
-    <rect x="332" y="320" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
-    <rect x="342" y="320" width="10" height="10" fill="rgba(59,130,246,0.16)"/>
+  <g transform="translate(150 0)">
+    <g class="sway" style="--sway-amt:8px; animation-duration:5.2s; animation-delay:-1.7s;">
+      <g class="rise" style="animation-duration:17.2s; animation-delay:-2.1s;">
+        <use href="#bubble-md"/>
+      </g>
+    </g>
   </g>
 
-  <!-- Bubble 3 -->
-  <g class="bubble" style="--drift: 180px; animation-duration: 13s; animation-delay: -4s;">
-    <rect x="612" y="300" width="12" height="12" fill="rgba(224,231,255,0.42)"/>
-    <rect x="624" y="300" width="12" height="12" fill="rgba(165,180,252,0.32)"/>
-    <rect x="600" y="312" width="12" height="12" fill="rgba(165,180,252,0.32)"/>
-    <rect x="612" y="312" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
-    <rect x="624" y="312" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
-    <rect x="636" y="312" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
-    <rect x="600" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
-    <rect x="612" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
-    <rect x="624" y="324" width="12" height="12" fill="rgba(99,102,241,0.22)"/>
-    <rect x="636" y="324" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
-    <rect x="612" y="336" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
-    <rect x="624" y="336" width="12" height="12" fill="rgba(59,130,246,0.16)"/>
+  <g transform="translate(290 0)">
+    <g class="sway" style="--sway-amt:12px; animation-duration:6.4s; animation-delay:-2.5s;">
+      <g class="rise" style="animation-duration:26.0s; animation-delay:-4.2s;">
+        <use href="#bubble-xxl"/>
+      </g>
+    </g>
   </g>
 
+  <g transform="translate(470 0)">
+    <g class="sway" style="--sway-amt:7px; animation-duration:5.0s; animation-delay:-1.3s;">
+      <g class="rise" style="animation-duration:15.0s; animation-delay:-6.3s;">
+        <use href="#bubble-sm"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(590 0)">
+    <g class="sway" style="--sway-amt:10px; animation-duration:5.8s; animation-delay:-2.9s;">
+      <g class="rise" style="animation-duration:22.4s; animation-delay:-8.4s;">
+        <use href="#bubble-lg"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(760 0)">
+    <g class="sway" style="--sway-amt:11px; animation-duration:6.1s; animation-delay:-3.4s;">
+      <g class="rise" style="animation-duration:24.8s; animation-delay:-10.5s;">
+        <use href="#bubble-xl"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(940 0)">
+    <g class="sway" style="--sway-amt:6px; animation-duration:4.7s; animation-delay:-1.9s;">
+      <g class="rise" style="animation-duration:14.4s; animation-delay:-12.6s;">
+        <use href="#bubble-sm"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1060 0)">
+    <g class="sway" style="--sway-amt:8px; animation-duration:5.3s; animation-delay:-2.1s;">
+      <g class="rise" style="animation-duration:18.0s; animation-delay:-14.7s;">
+        <use href="#bubble-md"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1210 0)">
+    <g class="sway" style="--sway-amt:12px; animation-duration:6.3s; animation-delay:-2.8s;">
+      <g class="rise" style="animation-duration:25.5s; animation-delay:-16.8s;">
+        <use href="#bubble-xxl"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1390 0)">
+    <g class="sway" style="--sway-amt:9px; animation-duration:5.6s; animation-delay:-1.4s;">
+      <g class="rise" style="animation-duration:20.0s; animation-delay:-18.9s;">
+        <use href="#bubble-lg"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1530 0)">
+    <g class="sway" style="--sway-amt:6px; animation-duration:4.9s; animation-delay:-2.2s;">
+      <g class="rise" style="animation-duration:13.8s; animation-delay:-21.0s;">
+        <use href="#bubble-sm"/>
+      </g>
+    </g>
+  </g>
 </svg>
