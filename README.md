@@ -34,17 +34,15 @@ I worked on scientific ML for IR spectra, including signal processing, functiona
 <br />
 
 <p><strong>Highlighted Papers: </strong></p>
-
+<p>
+  <a href="https://openreview.net/forum?id=XNb0fwIGGJ" target="_blank" rel="noopener noreferrer"><strong>Symmetry-Constrained Gaussian Processes</strong></a>: <strong><em>ICML 2026 AI for Science [Oral]</em></strong>
+  <br />
+  Matched baseline molecular-property accuracy with up to 5x fewer labels; reduced FreeSolv MAE by 31.7% at 1600 labels.
+</p>
 <p>
   <a href="https://openreview.net/forum?id=6NBCrKmAB2" target="_blank" rel="noopener noreferrer"><strong>The Geometry of Forgetting</strong></a>: <strong><em>CATS@ICML 2026 [Oral]</em></strong>
   <br />
   Predicted actual alignment degradation with R² = 0.991; diagonal Fisher approximated full Fisher with R² = 0.887.
-</p>
-
-<p>
-  <a href="https://ai4sciencecommunity.github.io/icml26" target="_blank" rel="noopener noreferrer"><strong>Symmetry-Constrained Gaussian Processes</strong></a>: <strong><em>ICML 2026 AI for Science [Oral]</em></strong>
-  <br />
-  Matched baseline molecular-property accuracy with up to 5x fewer labels; reduced FreeSolv MAE by 31.7% at 1600 labels.
 </p>
 
 <p>
